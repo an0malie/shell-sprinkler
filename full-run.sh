@@ -13,7 +13,7 @@
 
 echo `date +"%H:%M:%S"`" > Starting a full run!"
 
-/home/pi/ShellSprinkler/full-north-zone.sh &
-/home/pi/ShellSprinkler/full-south-zone.sh &
+/home/pi/shell-sprinkler/full-north-zone.sh &
+/home/pi/shell-sprinkler/full-south-zone.sh &
 
 echo `date +"%H:%M:%S"`" > Full run started!"

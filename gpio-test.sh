@@ -12,7 +12,7 @@
 # GPIO 17 - Relay 1
 
 # Include our library functions
-. /home/pi/ShellSprinkler/lib.sh
+. /home/pi/shell-sprinkler/lib.sh
 
 # Define our pinouts
 GPIOs="17 23 24 25 5 6 16 26"

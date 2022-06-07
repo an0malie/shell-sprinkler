@@ -13,7 +13,7 @@
 
 echo `date +"%H:%M:%S"`" > Starting a quick run!"
 
-./quick-north-zone.sh &
-./quick-south-zone.sh &
+/home/pi/shell-sprinkler/quick-north-zone.sh &
+/home/pi/shell-sprinkler/quick-south-zone.sh &
 
 echo `date +"%H:%M:%S"`" > Quick run started!"

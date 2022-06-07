@@ -12,21 +12,13 @@
 # GPIO 17 - Relay 1
 
 # Include our library functions
-. /home/pi/ShellSprinkler/lib.sh
+. /home/pi/shell-sprinkler/lib.sh
 
-# Define our pinouts
-GPIOs="26"
+pin=$pinN1
+runtime=$((timeN1 / quickDiv))
 
-# Prep our pinouts
-#initGPIO $GPIOs
-
-# Foreach pinout, set it to high to 5 seconds to test it
-for GPIO in ${GPIOs}
-do
-   echo `date +"%H:%M:%S"`" > Setting GPIO $GPIO to high for 30 minutes"
-   setGPIO $GPIO 30
-   echo `date +"%H:%M:%S"`" > GPIO $GPIO done!"
-   sleep 1
-done
+echo `date +"%H:%M:%S"`" > Setting GPIO $pin to high for $runtime seconds"
+setGPIO $pin $runtime
+echo `date +"%H:%M:%S"`" > GPIO $pin done!"
 
 echo `date +"%H:%M:%S"`" > GPIO test complete!"

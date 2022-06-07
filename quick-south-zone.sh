@@ -12,12 +12,12 @@
 # GPIO 17 - Relay 1
 
 # Include our library functions
-. ./lib.sh
+. /home/pi/shell-sprinkler/lib.sh
 
 # Define our pinouts
-GPIOs="5 6 16 26"
+GPIOs="$pinS1 $pinS2 $pinS3 $pinS4"
 gpioArray=(${GPIOs})
-TIMEs="300 300 450 600"
+TIMEs="$timeS1 $timeS2 $timeS3 $timeS4"
 timeArray=(${TIMEs})
 
 # Prep our pinouts

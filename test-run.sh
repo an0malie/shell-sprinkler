@@ -13,7 +13,7 @@
 
 echo `date +"%H:%M:%S"`" > Starting a test run!"
 
-/home/pi/ShellSprinkler/test-north-zone.sh &
-/home/pi/ShellSprinkler/test-south-zone.sh &
+/home/pi/shell-sprinkler/test-north-zone.sh &
+/home/pi/shell-sprinkler/test-south-zone.sh &
 
 echo `date +"%H:%M:%S"`" > Test run started!"

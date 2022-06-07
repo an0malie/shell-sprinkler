@@ -19,6 +19,9 @@ timeS2=1800
 timeS3=2700
 timeS4=3600
 
+quickDiv=60
+testDiv=100
+
 #
 # Initialize the GPIO pins
 #

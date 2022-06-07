@@ -12,12 +12,12 @@
 # GPIO 17 - Relay 1
 
 # Include our library functions
-. /home/pi/ShellSprinkler/lib.sh
+. /home/pi/shell-sprinkler/lib.sh
 
 # Define our pinouts
-GPIOs="5 6 16 26"
+GPIOs="$pinS1 $pinS2 $pinS3 $pinS4"
 gpioArray=(${GPIOs})
-TIMEs="30 30 45 60"
+TIMEs="$timeS1 $timeS2 $timeS3 $timeS4"
 timeArray=(${TIMEs})
 
 # Prep our pinouts
@@ -26,8 +26,9 @@ initGPIO $GPIOs
 # Foreach pinout, set it to high to TIMEs[x] seconds
 for i in {0..3}
 do
-   echo `date +"%H:%M:%S"`" > Setting GPIO ${gpioArray[$i]} to high for ${timeArray[$i]} seconds"
-   setGPIO ${gpioArray[$i]} ${timeArray[$i]}
+   runtime=$((timeArray[$i] / testDiv))
+   echo `date +"%H:%M:%S"`" > Setting GPIO ${gpioArray[$i]} to high for $runtime seconds"
+   setGPIO ${gpioArray[$i]} $runtime
    echo `date +"%H:%M:%S"`" > GPIO ${gpioArray[$i]} done!"
    sleep 1
 done
